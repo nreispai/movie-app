@@ -360,7 +360,7 @@ async function search() {
     cardMedia.setAttribute("data-set", media.id);
     cardMedia.className = "card";
     cardMedia.innerHTML = constructCardMedia(
-      `/movie-app/${type}-details.html?id=${media.id}`,
+      `/${type}-details.html?id=${media.id}`,
       media.poster_path,
       title,
       date
