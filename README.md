@@ -2,6 +2,8 @@
 
 This is a web application built with HTML, CSS, and JavaScript, leveraging the TMDB API to provide users with information about their favorite movies and TV shows. The functionalities include browsing top-rated movies and TV shows, searching for specific titles, and viewing detailed information about a selected movie or TV show.
 
+Check it out: https://dulcet-lily-6e3b48.netlify.app/
+
 ## Project Structure
 
 - Fetches data from TMDB API.
