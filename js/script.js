@@ -68,7 +68,11 @@ function init() {
     case "/tv-details.html":
       showDetails("tv");
       break;
+    case "/movie-app/search.html":
+      search();
+      break;  
   }
+  
   // Highlight the current page link
   highlightActiveLink();
 }
@@ -328,6 +332,34 @@ function initSwiper() {
         slidesPerView: 4,
       },
     },
+  });
+}
+
+// Search movies or shows
+async function search() {
+  const params = new URL(document.location).searchParams;
+  const type = params.get("type");
+  const term = params.get("search-term");
+  const url = `https://api.themoviedb.org/3/search/${type}?api_key=${API_KEY}&language=en-US&query=${term}&page=1`;
+
+  const response = await fetch(url);
+  const searchResults = await response.json();
+  const cardGrid = document.querySelector(`#search-results`);
+
+  searchResults.results.forEach((media) => {
+    const title = type === "movie" ? media.title : media.name;
+    const date = type === "movie" ? media.release_date : media.first_air_date;
+
+    const cardMedia = document.createElement("div");
+    cardMedia.setAttribute("data-set", media.id);
+    cardMedia.className = "card";
+    cardMedia.innerHTML = constructCardMedia(
+      `/movie-app/${type}-details.html?id=${media.id}`,
+      media.poster_path,
+      title,
+      date
+    );
+    cardGrid.appendChild(cardMedia);
   });
 }
 
