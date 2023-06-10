@@ -21,6 +21,7 @@ async function fetchAPIData(endpoint) {
   );
   // Parse response as JSON
   const data = await response.json();
+  console.log(response.status);
 
   // Hide spinner
   setTimeout(() => {
