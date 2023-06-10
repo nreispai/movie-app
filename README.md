@@ -9,6 +9,7 @@ Check it out: https://dulcet-lily-6e3b48.netlify.app/
 - Fetches data from TMDB API.
 - Dynamically populates a grid of movies or TV shows on the homepage.
 - Highlights the active page in the navigation.
+- Search feature that allows users to find their favourite movies or TV shows.
 - Displays a detailed view of a selected movie or TV show.
 - Formats budget and revenue information to a currency format.
 
