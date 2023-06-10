@@ -54,17 +54,17 @@ function highlightActiveLink() {
 function init() {
   // Decide which function to run based on the current page
   switch (global.currentPage) {
-    case "/movie-app/index.html":
+    case "./index.html":
       displayMedia("movie");
       displaySlidder();
       break;
-    case "/movie-app/shows.html":
+    case "./shows.html":
       displayMedia("tv");
       break;
-    case "/movie-app/movie-details.html":
+    case "./movie-details.html":
       showDetails("movie");
       break;
-    case "/movie-app/tv-details.html":
+    case "./tv-details.html":
       showDetails("tv");
       break;
   }
