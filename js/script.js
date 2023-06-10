@@ -342,8 +342,14 @@ async function search() {
   const term = params.get("search-term");
   const url = `https://api.themoviedb.org/3/search/${type}?api_key=${API_KEY}&language=en-US&query=${term}&page=1`;
 
+  showSpinner();
   const response = await fetch(url);
   const searchResults = await response.json();
+  
+  // Hide spinner
+  setTimeout(() => {
+    hideSpinner();
+  }, 300);
   const cardGrid = document.querySelector(`#search-results`);
 
   searchResults.results.forEach((media) => {
