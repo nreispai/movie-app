@@ -59,13 +59,13 @@ function init() {
       displayMedia("movie");
       displaySlidder();
       break;
-    case "./shows.html":
+    case "/shows.html":
       displayMedia("tv");
       break;
-    case "./movie-details.html":
+    case "/movie-details.html":
       showDetails("movie");
       break;
-    case "./tv-details.html":
+    case "/tv-details.html":
       showDetails("tv");
       break;
   }
