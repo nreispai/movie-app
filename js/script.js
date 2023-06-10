@@ -55,7 +55,7 @@ function highlightActiveLink() {
 function init() {
   // Decide which function to run based on the current page
   switch (global.currentPage) {
-    case "./index.html":
+    case "/":
       displayMedia("movie");
       displaySlidder();
       break;
