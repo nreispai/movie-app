@@ -68,7 +68,7 @@ function init() {
     case "/tv-details.html":
       showDetails("tv");
       break;
-    case "/movie-app/search.html":
+    case "/search.html":
       search();
       break;  
   }
